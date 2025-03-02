@@ -1,50 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap');
+
+:root {
+    --primary-color: #06099c;  
+    --hover-color: #2828b4;    
+    --background-color: #F7F9FC; 
+    --text-color: #333;
+    --button-text-color: white;
+    --border-radius: 10px;
+}
+
 body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
-}
-
-nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
-}
-
-nav ul {
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 50px 20px;
+    margin: 0;
     display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    list-style-type: none;
-    margin: 0;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
-    text-decoration: none;
-    font-size: 1.2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
+    font-size: 2.4em;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--primary-color);
 }
 
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+h1#generatedName {
+    font-size: 1.6em;
+    font-weight: 600;
+    padding: 12px 20px;
+    background-color: white;
+    display: inline-block;
+    border-radius: var(--border-radius);
+    min-width: 280px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
-img.about {
-    opacity: 0.5;
+button {
+    background: var(--primary-color);
+    color: var(--button-text-color);
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: var(--border-radius);
+    margin-top: 15px;
+}
+
+
+button:hover {
+    background: var(--hover-color);
+    transform: scale(1.05);
 }

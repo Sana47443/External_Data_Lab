@@ -1,0 +1,30 @@
+---
+title: "Random Name Generator"
+layout: layout.liquid
+---
+
+<section x-data="nameGeneratorData()" class="text-center">
+    <h1 id="generatedName" x-text="currentName || 'Click to Generate a Name'" 
+        class="text-2xl font-semibold p-4 bg-blue-200 rounded-md inline-block">
+    </h1>
+    <button @click="generateName()" 
+        class="mt-4 px-5 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition">
+        Generate Name
+    </button>
+</section>
+
+<!-- Fetch and Render User Profile -->
+<section x-data="{ users: [] }" x-init="fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(data => users = data)" 
+    class="mt-8 p-4 bg-gray-100 rounded-lg shadow">
+    
+    <h2 class="text-xl font-bold">User Profiles</h2>
+    <ul>
+        <template x-for="user in users">
+            <li class="p-2 border-b" x-text="user.name"></li>
+        </template>
+    </ul>
+</section>
+
+<script src="script.js"></script>
