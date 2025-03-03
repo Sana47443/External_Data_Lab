@@ -8,8 +8,8 @@ module.exports = function(eleventyConfig) {
 
   return {
       dir: {
-          input: "site",  // ✅ Points Eleventy to the "site" folder for content
-          output: "_site" // ✅ Where Eleventy will generate the final files
+          input: "site",  
+          output: "_site" 
       }
   };
 };

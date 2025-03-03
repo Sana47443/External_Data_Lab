@@ -14,10 +14,19 @@ title: "Random Name Generator"
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <header class="p-6 bg-blue-600 text-white text-center">
-        <h1 class="text-3xl font-bold">Random Name Generator</h1>
+    <!-- ✅ New Navigation Bar -->
+    <nav class="bg-blue-600 text-white p-4">
+        <ul class="flex justify-center space-x-6">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/myai-reflection/" class="hover:underline">AI Reflection</a>
+        </ul>
+    </nav>
+
+    <header class="text-center p-6">
+        <h1 class="text-3xl font-bold text-blue-700">Random Name Generator</h1>
     </header>
-    <main class="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg mt-6">
+
+    <main>
         {{ content }}
     </main>
 </body>
